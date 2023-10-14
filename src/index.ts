@@ -1,4 +1,5 @@
 import "./components/export"
+import { dataCatFact, dataCatImage } from "./types/api";
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -8,11 +9,12 @@ class AppContainer extends HTMLElement {
 
     connectedCallback() {
         this.render()
+        console.log("Gatos tristes")
     }
 
     render() {
-        const something = this.ownerDocument.createElement('div');
-        this.shadowRoot?.appendChild(something);
+        const catscomp = this.ownerDocument.createElement('app-cats');
+        this.shadowRoot?.appendChild(catscomp);
     }
 }
 
